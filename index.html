@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="header">
+    <div class="nav-content">
+      <a class="logo" href="#">LAPRIK</a>
+      <div class="nav_search">
+        <div class="nav_search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <input type="text" placeholder="Tìm kiếm sản phẩm">
+      </div>
+      <div class="nav_auth">
+        <a href="" class="search_auth-item">Đăng nhập</a>
+        <div class="vr"></div>
+        <a href="" class="search_auth-item">Đăng ký</a>
+      </div>
+      <div class="nav_cart"><i class="fa-solid fa-cart-shopping"></i></div>
+    </div>
+  </nav>
+  <main>
+    <div class="home">
+      <div class="sitebar" id="sitebar">
+        <div class="sitebar_link">
+          <a href="#" class="sitebar-item">Danh mục sản phẩm</a>
+        </div>
+        <div class="sitebar_link">
+          <a href="#" class="sitebar-item">Tất cả sản phẩm</a>
+          <div class="sitebar-icon"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+        <div class="sitebar_link">
+          <a href="#" class="sitebar-item">Macbook</a>
+          <div class="sitebar-icon"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="sitebar_child">
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Air</a>
+            </div>
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Pro</a>
+            </div>
+          </div>
+        </div>
+        <div class="sitebar_link">
+          <a href="#" class="sitebar-item">Laptop Dell</a>
+          <div class="sitebar-icon"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="sitebar_child">
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Air</a>
+            </div>
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Pro</a>
+            </div>
+          </div>
+        </div>
+        <div class="sitebar_link">
+          <a href="#" class="sitebar-item">Laptop Asus</a>
+          <div class="sitebar-icon"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="sitebar_child">
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Air</a>
+            </div>
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Pro</a>
+            </div>
+          </div>
+        </div>
+        <div class="sitebar_link">
+          <a href="#" class="sitebar-item">Laptop HP</a>
+          <div class="sitebar-icon"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="sitebar_child">
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Air</a>
+            </div>
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Pro</a>
+            </div>
+          </div>
+        </div>
+        <div class="sitebar_link">
+          <a href="#" class="sitebar-item">Laptop Lenovo</a>
+          <div class="sitebar-icon"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="sitebar_child">
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Air</a>
+            </div>
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Pro</a>
+            </div>
+          </div>
+        </div>
+        <div class="sitebar_link">
+          <a href="#" class="sitebar-item">Laptop Đồ Họa</a>
+          <div class="sitebar-icon"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="sitebar_child">
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Air</a>
+            </div>
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Pro</a>
+            </div>
+          </div>
+        </div>
+        <div class="sitebar_link">
+          <a href="#" class="sitebar-item">Laptop Gaming</a>
+          <div class="sitebar-icon"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="sitebar_child">
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Air</a>
+            </div>
+            <div class="sitebar_child-item">
+              <a href="/macbook">Macbook Pro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainRight">
+        <div class="home_swiper">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/112b2699-9a90-4233-8e0e-ca7910173f34/dfgbbdd-ef9af470-5bd6-4cd4-af05-e56912371c42.jpg/v1/fit/w_414,h_276,q_70,strp/lord_admiral_jaina_proudmoore_by_thuwoocreative_dfgbbdd-414w.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTM0IiwicGF0aCI6IlwvZlwvMTEyYjI2OTktOWE5MC00MjMzLThlMGUtY2E3OTEwMTczZjM0XC9kZmdiYmRkLWVmOWFmNDcwLTViZDYtNGNkNC1hZjA1LWU1NjkxMjM3MWM0Mi5qcGciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.pfT6cG3nNefgkVsEjasADPNLR6a197uDnQjrqJ7ITB4"
+                  alt="">
+              </div>
+              <div class="swiper-slide"><img
+                  src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1ff3d680-88e7-4913-9926-e93ed84db30a/df1rmf1-d1231bcb-c37e-4dfb-87d2-091037e9881c.jpg/v1/fill/w_560,h_350,q_70,strp/taxi_dream_by_mr_xerty_df1rmf1-350t.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODAwIiwicGF0aCI6IlwvZlwvMWZmM2Q2ODAtODhlNy00OTEzLTk5MjYtZTkzZWQ4NGRiMzBhXC9kZjFybWYxLWQxMjMxYmNiLWMzN2UtNGRmYi04N2QyLTA5MTAzN2U5ODgxYy5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.85FAGonxmI9Hn75SK9jF2vWhQbpCWCLhGymItlvHoTQ"
+                  alt=""></div>
+              <div class="swiper-slide"><img
+                  src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/65ff2d35-c0d5-4f4a-95d5-e369f261e7a5/df8ynze-d2201456-cef8-4e6a-bbf1-5e873493804f.jpg/v1/fill/w_661,h_350,q_70,strp/alchemy_alley_by_z4ltys_df8ynze-350t.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAxNiIsInBhdGgiOiJcL2ZcLzY1ZmYyZDM1LWMwZDUtNGY0YS05NWQ1LWUzNjlmMjYxZTdhNVwvZGY4eW56ZS1kMjIwMTQ1Ni1jZWY4LTRlNmEtYmJmMS01ZTg3MzQ5MzgwNGYuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.wGclOKdIspO1DjA4wWpHPTKqdlzpFb3f6ODfHQyZNZI"
+                  alt=""></div>
+              <div class="swiper-slide"><img
+                  src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/52ef6a1f-8046-42fc-a528-3799b9ab66f7/deu297q-df616439-38ac-40e3-884d-0563f1cdbc34.jpg/v1/fit/w_414,h_277,q_70,strp/country_roads_by_csipesz_deu297q-414w.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjAzIiwicGF0aCI6IlwvZlwvNTJlZjZhMWYtODA0Ni00MmZjLWE1MjgtMzc5OWI5YWI2NmY3XC9kZXUyOTdxLWRmNjE2NDM5LTM4YWMtNDBlMy04ODRkLTA1NjNmMWNkYmMzNC5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.FtyQ_wnwRy8fYPWltLHcA55DKQUmFfAxjbpEt049kT8"
+                  alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="layout_1">
+        <div class="banner-text ">LAPTOP VĂN PHÒNG BÁN CHẠY</div>
+        <div class="layout_1-swiper">
+          <div class="swiper mySwiperLayout">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="layout_card">
+                  <div class="card-content card">
+                    <img
+                      src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                      alt="">
+                    <div class="card-code">Mã: a123</div>
+                    <div class="card-title">
+                      <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like
+                      New - OPENBOX】
+                    </div>
+                    <div class="card-price">12.123.123đ</div>
+                    <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                  </div>
+                  <button>Mua Hàng</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="layout_card">
+                  <div class="card-content card">
+                    <img
+                      src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                      alt="">
+                    <div class="card-code">Mã: a123</div>
+                    <div class="card-title">
+                      <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like
+                      New - OPENBOX】
+                    </div>
+                    <div class="card-price">12.123.123đ</div>
+                    <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                  </div>
+                  <button>Mua Hàng</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="layout_card">
+                  <div class="card-content card">
+                    <img
+                      src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                      alt="">
+                    <div class="card-code">Mã: a123</div>
+                    <div class="card-title">
+                      <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like
+                      New - OPENBOX】
+                    </div>
+                    <div class="card-price">12.123.123đ</div>
+                    <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                  </div>
+                  <button>Mua Hàng</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="layout_card">
+                  <div class="card-content card">
+                    <img
+                      src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                      alt="">
+                    <div class="card-code">Mã: a123</div>
+                    <div class="card-title">
+                      <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like
+                      New - OPENBOX】
+                    </div>
+                    <div class="card-price">12.123.123đ</div>
+                    <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                  </div>
+                  <button>Mua Hàng</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="layout_card">
+                  <div class="card-content card">
+                    <img
+                      src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                      alt="">
+                    <div class="card-code">Mã: a123</div>
+                    <div class="card-title">
+                      <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like
+                      New - OPENBOX】
+                    </div>
+                    <div class="card-price">12.123.123đ</div>
+                    <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                  </div>
+                  <button>Mua Hàng</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="layout_card">
+                  <div class="card-content card">
+                    <img
+                      src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                      alt="">
+                    <div class="card-code">Mã: a123</div>
+                    <div class="card-title">
+                      <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like
+                      New - OPENBOX】
+                    </div>
+                    <div class="card-price">12.123.123đ</div>
+                    <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                  </div>
+                  <button>Mua Hàng</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="layout_card">
+                  <div class="card-content card">
+                    <img
+                      src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                      alt="">
+                    <div class="card-code">Mã: a123</div>
+                    <div class="card-title">
+                      <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like
+                      New - OPENBOX】
+                    </div>
+                    <div class="card-price">12.123.123đ</div>
+                    <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                  </div>
+                  <button>Mua Hàng</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="layout_2">
+        <div class="banner-text ">LAPTOP VĂN PHÒNG BÁN CHẠY</div>
+        <div class="layout_2-content container-fluid">
+          <div class="rows">
+            <div class="rows-item">
+              <div class="layout_card">
+                <div class="card-content card">
+                  <img
+                    src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                    alt="">
+                  <div class="card-code">Mã: a123</div>
+                  <div class="card-title">
+                    <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like New
+                    - OPENBOX】
+                  </div>
+                  <div class="card-price">12.123.123đ</div>
+                  <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                </div>
+                <button>Mua Hàng</button>
+              </div>
+            </div>
+            <div class="rows-item">
+              <div class="layout_card">
+                <div class="card-content card">
+                  <img
+                    src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                    alt="">
+                  <div class="card-code">Mã: a123</div>
+                  <div class="card-title">
+                    <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like New
+                    - OPENBOX】
+                  </div>
+                  <div class="card-price">12.123.123đ</div>
+                  <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                </div>
+                <button>Mua Hàng</button>
+              </div>
+            </div>
+            <div class="rows-item">
+              <div class="layout_card">
+                <div class="card-content card">
+                  <img
+                    src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                    alt="">
+                  <div class="card-code">Mã: a123</div>
+                  <div class="card-title">
+                    <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like New
+                    - OPENBOX】
+                  </div>
+                  <div class="card-price">12.123.123đ</div>
+                  <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                </div>
+                <button>Mua Hàng</button>
+              </div>
+            </div>
+            <div class="rows-item">
+              <div class="layout_card">
+                <div class="card-content card">
+                  <img
+                    src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                    alt="">
+                  <div class="card-code">Mã: a123</div>
+                  <div class="card-title">
+                    <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like New
+                    - OPENBOX】
+                  </div>
+                  <div class="card-price">12.123.123đ</div>
+                  <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                </div>
+                <button>Mua Hàng</button>
+              </div>
+            </div>
+          </div>
+          <div class="rows">
+            <div class="rows-item">
+              <div class="layout_card">
+                <div class="card-content card">
+                  <img
+                    src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                    alt="">
+                  <div class="card-code">Mã: a123</div>
+                  <div class="card-title">
+                    <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like New
+                    - OPENBOX】
+                  </div>
+                  <div class="card-price">12.123.123đ</div>
+                  <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                </div>
+                <button>Mua Hàng</button>
+              </div>
+            </div>
+            <div class="rows-item">
+              <div class="layout_card">
+                <div class="card-content card">
+                  <img
+                    src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                    alt="">
+                  <div class="card-code">Mã: a123</div>
+                  <div class="card-title">
+                    <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like New
+                    - OPENBOX】
+                  </div>
+                  <div class="card-price">12.123.123đ</div>
+                  <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                </div>
+                <button>Mua Hàng</button>
+              </div>
+            </div>
+            <div class="rows-item">
+              <div class="layout_card">
+                <div class="card-content card">
+                  <img
+                    src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                    alt="">
+                  <div class="card-code">Mã: a123</div>
+                  <div class="card-title">
+                    <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like New
+                    - OPENBOX】
+                  </div>
+                  <div class="card-price">12.123.123đ</div>
+                  <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                </div>
+                <button>Mua Hàng</button>
+              </div>
+            </div>
+            <div class="rows-item">
+              <div class="layout_card">
+                <div class="card-content card">
+                  <img
+                    src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                    alt="">
+                  <div class="card-code">Mã: a123</div>
+                  <div class="card-title">
+                    <a href="/macbook">Macbook Air</a> M1 13 inch 2020 - Apple M1 8-Core CPU / 8GB / 256GB SSD 【Like New
+                    - OPENBOX】
+                  </div>
+                  <div class="card-price">12.123.123đ</div>
+                  <div class="card-status"><i class="fa-solid fa-check"></i>Còn hàng</div>
+                </div>
+                <button>Mua Hàng</button>
+              </div>
+            </div>
+          </div>
+          <div aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer_row">
+      <div class="foote_row">
+        <ul>
+          <h1>Danh mục khách hàng</h1>
+          <li>GIỎ HÀNG</li>
+          <li>TÀI KHOẢN</li>
+          <li>ĐĂNG NHẬP</li>
+          <li>ĐĂNG KÍ</li>
+          <li>HỖ TRỢ</li>
+          <li>TRA CỨU</li>
+        </ul>
+      </div>
+      <div class="foote_row">
+        <ul>
+          <h1>Danh mục</h1>
+          <li>MACBOOK</li>
+          <li>LAPTOP DELL</li>
+          <li>LAPTOP ASUS</li>
+          <li>LAPTOP HP</li>
+          <li>LAPTOP LENOVO</li>
+          <li>LAPTOP ACER</li>
+        </ul>
+      </div>
+      <div class="foote_row">
+        <ul>
+          <h1>Liên hệ</h1>
+          <li>
+            <i class="fa-solid fa-house"></i>
+            <span>122 Nguyen Kiem, Go Vap, HCM</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>1231231232</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span>123@gmail.com/span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
