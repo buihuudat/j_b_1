@@ -47,6 +47,8 @@ nav {
 .logo {
   font-weight: 600;
   font-size: 2rem;
+  width: 200px;
+  margin-right: 300px;
   color: #000;
 }
 .logo:hover {
@@ -258,7 +260,7 @@ main {
 
 /* car of layout */
 .layout_card {
-  width: 380px;
+  min-width: 100%;
   height: 600px;
   transition: ease 3s;
 }
@@ -365,10 +367,19 @@ main {
 .footer_row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.922);
   color: #fff;
   padding: 2rem;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.foote_row {
+  margin: 0 auto;
+}
+
+.foote_row ul {
+  width: 500px;
 }
 
 footer li {
