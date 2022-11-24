@@ -256,11 +256,14 @@ main {
   padding-left: 3rem;
   font-weight: 500;
   margin: 2rem 0;
+  overflow: hidden;
+  height: 80px;
+  white-space: nowrap;
 }
 
 /* car of layout */
 .layout_card {
-  min-width: 100%;
+  width: 320px;
   height: 600px;
   transition: ease 3s;
 }
@@ -279,7 +282,7 @@ main {
 
 .layout_card img {
   width: 220px;
-  height: auto;
+  height: 220px;
   object-fit: cover;
   margin: 0 auto;
 }
@@ -297,11 +300,20 @@ main {
 .layout_card button {
   z-index: 1000!important;
   position: relative;
+  width: 300px;
 }
 
 .card-title {
   font-weight: 500;
   font-size: 1.2rem;
+  text-overflow: ellipsis;
+  max-width: 320px;
+  margin: 0 auto;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }
 
 .card-price {
@@ -358,7 +370,7 @@ main {
   flex-direction: row;
   gap: 3rem;
   flex-wrap: nowrap;
-  margin: 0 5rem;
+  margin: 0 15rem;
 }
 
 
