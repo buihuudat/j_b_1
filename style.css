@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -31,25 +32,27 @@ nav {
   z-index: 1000;
   width: 100vw;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 
 .nav-content {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 5rem;
   align-items: center;
   padding: 1rem 5rem 3rem;
-  justify-content: space-between;
   width: 100vw;
+  overflow: hidden;
 }
 
 .logo {
   font-weight: 600;
   font-size: 2rem;
   width: 200px;
-  margin-right: 300px;
+  margin-right: 10%;
   color: #000;
+  position: relative;
 }
 .logo:hover {
   text-decoration: none;
@@ -60,7 +63,7 @@ nav {
 }
 
 .nav_search input {
-  width: 700px;
+  min-width: 500px;
   height: 50px;
   padding-left: 3rem;
   outline: none;
@@ -92,7 +95,7 @@ nav {
 .search_auth-item {
   word-wrap: normal;
   overflow-x: hidden;
-  width: 120px;
+  width: 150px;
 }
 
 .nav_auth a {
@@ -111,6 +114,7 @@ nav {
 .nav_cart i {
   font-size: 3rem;
   cursor: pointer;
+  justify-content: end;
 }
 
 /* main */
@@ -365,6 +369,7 @@ main {
   overflow-x: hidden;
 }
 
+
 .layout_2 .rows {
   display: flex;
   flex-direction: row;
@@ -373,7 +378,16 @@ main {
   margin: 0 15rem;
 }
 
-
+@media only screen and (max-width: 1800px) {
+  .layout_2 .rows {
+    margin: 0 5rem;
+  }
+}
+@media only screen and (max-width: 1766px) {
+  .layout_2 .rows {
+    margin: 0 3rem;
+  }
+}
 
 /* footer */
 .footer_row {
