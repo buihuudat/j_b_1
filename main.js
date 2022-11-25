@@ -1,22 +1,22 @@
 $(document).ready(function () {
-  var siteLink = $(".sitebar_link").toArray();
+  var siteLink = $(".sitebar_link .sitebar-icon").toArray();
   var siteChild = $(".sitebar_child").toArray();
 
   siteLink.map((e, i) => {
     $(e).click(() => {
-      if ($(e).hasClass("show")) {
-        $(e).removeClass("show");
-        $($(".sitebar_link i")[i - 1])
+      if ($(e).parent().hasClass("show")) {
+        $(e).parent().removeClass("show");
+        $($(".sitebar_link i")[i])
           .addClass("fa-chevron-right")
           .removeClass("fa-chevron-down");
         return;
       }
-      $(siteLink).removeClass("show");
+      $(siteLink).parent().removeClass("show");
       $($(".sitebar_link i"))
         .removeClass("fa-chevron-down")
         .addClass("fa-chevron-right");
-      $(e).addClass("show");
-      $($(".sitebar_link i")[i - 1])
+      $(e).parent().addClass("show");
+      $($(".sitebar_link i")[i])
         .addClass("fa-chevron-down")
         .removeClass("fa-chevron-right");
     });
