@@ -16,7 +16,7 @@ body {
   overflow-x: hidden;
 }
 
-main {
+main,#products {
   min-height: 100vh;
   min-width: 1900px;
   margin: 0 auto;
@@ -24,7 +24,7 @@ main {
 
 
 @media screen and (max-width: 1660px) {
-  main {
+  #products {
     min-width: 1500px;
     margin: 0 auto;
   }
@@ -395,7 +395,7 @@ main {
 }
 
 @media only screen and (max-width: 1800px) {
-  main {
+  #products {
     max-width: 1800px;
   }
   .layout_2 .rows {
@@ -403,7 +403,7 @@ main {
   }
 }
 @media only screen and (max-width: 1766px) {
-  main {
+  #products {
     max-width: 1766px;
   }
   .layout_2 .rows {
