@@ -7,12 +7,17 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  width: 1920px;
 }
 
 body {
   position: relative;
   height: 100%;
   overflow-x: hidden;
+}
+
+main {
+  min-height: 100vh;
 }
 
 a {
@@ -30,7 +35,7 @@ nav {
   position: fixed;
   height: 100px;
   z-index: 1000;
-  width: 100vw;
+  width: inherit;
   overflow: hidden;
   white-space: nowrap;
 }
