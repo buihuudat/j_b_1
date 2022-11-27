@@ -80,8 +80,7 @@
   background-color: #ccc;
 }
 
-.selector-form-item input:checked ~ .checkmark, 
-.selector-items .selector-form-item:nth-child(1) input ~ .checkmark {
+.selector-form-item input:checked ~ .checkmark {
   background-color: #FF4500;
 }
 

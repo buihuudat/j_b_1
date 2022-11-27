@@ -7,8 +7,8 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  width: 1920px;
 }
+
 
 body {
   position: relative;
@@ -18,7 +18,11 @@ body {
 
 main {
   min-height: 100vh;
+  min-width: 1900px;
+  margin: 0 auto;
 }
+
+
 
 a {
   color: inherit;
@@ -384,11 +388,17 @@ main {
 }
 
 @media only screen and (max-width: 1800px) {
+  main {
+    max-width: 1800px;
+  }
   .layout_2 .rows {
     margin: 0 5rem;
   }
 }
 @media only screen and (max-width: 1766px) {
+  main {
+    max-width: 1766px;
+  }
   .layout_2 .rows {
     margin: 0 3rem;
   }
