@@ -13,6 +13,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/pay.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+    integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -32,96 +36,94 @@
         <a href="" class="search_auth-item">Đăng nhập</a>
         <div class="vr"></div>
         <a href="" class="search_auth-item">Đăng ký</a>
+        <div class="nav_cart"><i class="fa-solid fa-cart-shopping"></i></div>
       </div>
-      <div class="nav_cart"><i class="fa-solid fa-cart-shopping"></i></div>
     </div>
   </nav>
 
   <main id="pay" class="container">
     <div class="dir">Trang chủ / <b>Thanh toán đơn hàng</b></div>
 
-    <div>
-      <table id="table-pay-product" class="table table-fixed">
-        <thead>
-          <tr>
-            <th></th>
-            <th>STT</th>
-            <th>Sản Phẩm</th>
-            <th>Số lượng</th>
-            <th>Đơn giá</th>
-            <th>Thành tiền</th>
-            <th>Xóa</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><i class="fa-regular fa-circle-check"></i></td>
-            <td>1</td>
-            <td style="width: 30%;">
-              <div class="productTable">
-                <img src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
-                  alt="img">
-                <span>Lenovo legigon 5 Pro 2022 16IAH7H (core i7 - 12700H, 16GB, 1TB, RTX 3060</span>
-              </div>
-            </td>
-            <td>
-              <div class="pay-product-button">
-                <i id="pay-product-btn-left" class="fa-regular fa-square-minus"></i>
-                <span id="product-pay-count">1</span>
-                <i id="pay-product-btn-right" class="fa-regular fa-square-plus"></i>
-              </div>
-            </td>
-            <td>25.990.000</td>
-            <td>25.990.000</td>
-            <td><button><i class="fa-solid fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td><i class="fa-regular fa-circle-check"></i></td>
-            <td>2</td>
-            <td style="width: 30%;">
-              <div class="productTable">
-                <img src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
-                  alt="img">
-                <span>Lenovo legigon 5 Pro 2022 16IAH7H (core i7 - 12700H, 16GB, 1TB, RTX 3060</span>
-              </div>
-            </td>
-            <td>
-              <div class="pay-product-button">
-                <i id="pay-product-btn-left" class="fa-regular fa-square-minus"></i>
-                <span id="product-pay-count">1</span>
-                <i id="pay-product-btn-right" class="fa-regular fa-square-plus"></i>
-              </div>
-            </td>
-            <td>25.990.000</td>
-            <td>25.990.000</td>
-            <td><button><i class="fa-solid fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td><i class="fa-regular fa-circle-check"></i></td>
-            <td>2</td>
-            <td style="width: 30%;">
-              <div class="productTable">
-                <img src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
-                  alt="img">
-                <span>Lenovo legigon 5 Pro 2022 16IAH7H (core i7 - 12700H, 16GB, 1TB, RTX 3060</span>
-              </div>
-            </td>
-            <td>
-              <div class="pay-product-button">
-                <i id="pay-product-btn-left" class="fa-regular fa-square-minus"></i>
-                <span id="product-pay-count">1</span>
-                <i id="pay-product-btn-right" class="fa-regular fa-square-plus"></i>
-              </div>
-            </td>
-            <td>25.990.000</td>
-            <td>25.990.000</td>
-            <td><button><i class="fa-solid fa-trash"></i></button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table id="table-pay-product">
+      <thead>
+        <tr>
+          <th></th>
+          <th>STT</th>
+          <th>Sản Phẩm</th>
+          <th>Số lượng</th>
+          <th>Đơn giá</th>
+          <th>Thành tiền</th>
+          <th>Xóa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><i class="fa-regular fa-circle-check"></i></td>
+          <td>1</td>
+          <td style="width: 30%;">
+            <div class="productTable">
+              <img src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                alt="img">
+              <span>Lenovo legigon 5 Pro 2022 16IAH7H (core i7 - 12700H, 16GB, 1TB, RTX 3060</span>
+            </div>
+          </td>
+          <td>
+            <div class="pay-product-button">
+              <i id="pay-product-btn-left" class="fa-regular fa-square-minus"></i>
+              <span id="product-pay-count">1</span>
+              <i id="pay-product-btn-right" class="fa-regular fa-square-plus"></i>
+            </div>
+          </td>
+          <td>25.990.000</td>
+          <td>25.990.000</td>
+          <td><button><i class="fa-solid fa-trash"></i></button></td>
+        </tr>
+        <tr>
+          <td><i class="fa-regular fa-circle-check"></i></td>
+          <td>2</td>
+          <td style="width: 30%;">
+            <div class="productTable">
+              <img src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                alt="img">
+              <span>Lenovo legigon 5 Pro 2022 16IAH7H (core i7 - 12700H, 16GB, 1TB, RTX 3060</span>
+            </div>
+          </td>
+          <td>
+            <div class="pay-product-button">
+              <i id="pay-product-btn-left" class="fa-regular fa-square-minus"></i>
+              <span id="product-pay-count">1</span>
+              <i id="pay-product-btn-right" class="fa-regular fa-square-plus"></i>
+            </div>
+          </td>
+          <td>25.990.000</td>
+          <td>25.990.000</td>
+          <td><button><i class="fa-solid fa-trash"></i></button></td>
+        </tr>
+        <tr>
+          <td><i class="fa-regular fa-circle-check"></i></td>
+          <td>2</td>
+          <td style="width: 30%;">
+            <div class="productTable">
+              <img src="https://fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg"
+                alt="img">
+              <span>Lenovo legigon 5 Pro 2022 16IAH7H (core i7 - 12700H, 16GB, 1TB, RTX 3060</span>
+            </div>
+          </td>
+          <td>
+            <div class="pay-product-button">
+              <i id="pay-product-btn-left" class="fa-regular fa-square-minus"></i>
+              <span id="product-pay-count">1</span>
+              <i id="pay-product-btn-right" class="fa-regular fa-square-plus"></i>
+            </div>
+          </td>
+          <td>25.990.000</td>
+          <td>25.990.000</td>
+          <td><button><i class="fa-solid fa-trash"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
 
-    <div class="pay-content">
+    <form class="pay-content">
       <div class="pay-info">
         <div class="pay-info-title">
           <b>Thông tin nhận hàng</b>
@@ -129,31 +131,31 @@
         <hr>
         <div class="form-control-pay">
           <label for="name">Họ tên người nhận (<span style="color: red;">*</span>)</label>
-          <input id="name" type="text">
+          <input minlength="6" pattern="[A-Za-z]{*}" id="namePay" required type="text">
         </div>
         <div class="form-control-pay">
           <label for="address">Địa chỉ cụ thể người nhận (<span style="color: red;">*</span>)</label>
-          <input id="address" type="text">
+          <input required id="address" type="text">
         </div>
         <div class="form-address">
           <select name="city" id="city">
-            <option value="hn">Hà nội</option>
+
           </select>
           <select name="ward" id="ward">
-            <option value="hn">Cầu giấy</option>
+
           </select>
-          <select name="phuong" id="phuong">
-            <option value="hn">Dịch vọng</option>
+          <select name="district" id="district">
+
           </select>
         </div>
         <div class="d-flex">
           <div class="form-control-pay" style="width: 44%;">
             <label for="">Số điện thoại (<span style="color: red;">*</span>)</label>
-            <input type="text">
+            <input required pattern="[0-9]{10}" type="text">
           </div>
           <div class="form-control-pay" style="width: 45%;">
             <label for="">Email</label>
-            <input type="text">
+            <input type="email" type="text">
           </div>
         </div>
         <div class="note-form d-flex mt-4 flex-column">
@@ -203,18 +205,17 @@
             <b>Lựa chọn hình thức thanh toán:</b>
           </div>
           <div class="select-type-pay">
-            <input type="radio" name="code" id="code" checked>
+            <input type="radio" name="bank" id="code" checked>
             <label for="code">COD</label>
           </div>
           <div class="select-type-pay">
             <input type="radio" name="bank" id="bank">
             <label for="code">Chuyển khoản ngân hàng</label>
           </div>
-          <button>Đặt hàng</button>
+          <button class="btn-order">Đặt hàng</button>
         </div>
-
       </div>
-    </div>
+    </form>
 
     <div class="pay-banner">
       <div class="pay-banner-content d-flex flex-column">
@@ -275,7 +276,10 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="./assets/js/main.js"></script>
 <script src="./assets/js/pay.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.2.0/axios.min.js"
+  integrity="sha512-QIsQNDM8hG/1Z3If8Zh2BcpQ79KL3ra1wVMVSliBjQfFMlWMA3tCSe6ZfTK9rw2Ag4hOQ4P5ZhQd4nQl2dMeog=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"

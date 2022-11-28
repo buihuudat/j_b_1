@@ -11,18 +11,6 @@
   font-size: 1.5rem;
 }
 
-#table-pay-product {
-  margin: 5rem;
-  text-align: center;
-  font-size: 1.2rem;
-  overflow: hidden;
-}
-
-#table-pay-product tbody{
-  mheight:200px;
-  overflow-y:auto;
-  width: 100%;
-  }
 
 #table-pay-product tbody tr {
   height: max-content;
@@ -40,6 +28,7 @@
 
 #pay .productTable span {
   font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .pay-product-button {
@@ -64,7 +53,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  padding-top: 3rem;
+  height: 700px;
 }
 
 .pay-info, .pay-bill {
@@ -93,6 +83,7 @@
   display: flex;
   justify-content: space-between;
   width: 80%;
+  font-size: 1rem;
 }
 
 .form-address select {
@@ -138,7 +129,7 @@
   font-weight: 600;
   color: white;
  float: right;
- margin-top: 3rem;
+ margin-top: 6rem;
 }
 
 /* pay banner */
@@ -184,3 +175,4 @@
   text-decoration: none;
   color: white;
 }
+
