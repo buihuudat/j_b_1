@@ -15,12 +15,14 @@
   margin: 5rem;
   text-align: center;
   font-size: 1.2rem;
+  overflow: hidden;
 }
 
-#table-pay-product tbody {
-  height: 200px;
-  overflow-y: auto;
-}
+#table-pay-product tbody{
+  mheight:200px;
+  overflow-y:auto;
+  width: 100%;
+  }
 
 #table-pay-product tbody tr {
   height: max-content;
