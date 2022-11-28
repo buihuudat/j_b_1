@@ -31,12 +31,12 @@ let districtss = [];
 async function resData(url) {
   const response = await fetch(url);
   var data = await response.json();
-  data.map((e) => {
+  data.forEach((e) => {
     var city = "";
     city += `<option value=${e.code}> ${e.name}</option>`;
     $("#city").append(city);
   });
-  citys.push(...data);
+  citys = new Array(data);
 }
 const uri = "https://provinces.open-api.vn/api/?depth=3";
 resData(uri);
@@ -44,29 +44,28 @@ resData(uri);
 let codeCity = 1;
 $(city).change(() => {
   codeCity = $(city).val();
-  citys.forEach((e) => {
+  citys[0].forEach((e) => {
     if (e.code == codeCity) {
-      wards = new Array(e.districts);
+      wards = e.districts;
     }
   });
-
-  wards[0].forEach((e) => {
-    var wardShow = "";
+  var wardShow = "";
+  wards.forEach((e) => {
     wardShow += `<option value=${e.code}> ${e.name}</option>`;
-    $("#ward").append(wardShow);
   });
+  $("#ward").html(wardShow);
 });
 
 $(ward).change(() => {
   codeWard = $(ward).val();
-  wards[0].forEach((e) => {
+  wards.forEach((e) => {
     if (e.code == codeWard) {
-      districtss = new Array(e.wards);
+      districtss = e.wards;
     }
   });
-  districtss[0].map((e) => {
-    var district = "";
+  var district = "";
+  districtss.map((e) => {
     district += `<option value=${e.code}> ${e.name}</option>`;
-    $("#district").append(district);
   });
+  $("#district").html(district);
 });
