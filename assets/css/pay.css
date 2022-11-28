@@ -1,0 +1,184 @@
+#pay {
+  width: 1920px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 5rem;
+  font-size: 1.5rem;
+}
+
+.dir {
+  font-size: 1.5rem;
+}
+
+#table-pay-product {
+  margin: 5rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#table-pay-product tbody {
+  height: 200px;
+  overflow-y: auto;
+}
+
+#table-pay-product tbody tr {
+  height: max-content;
+}
+
+.productTable {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#pay .productTable img {
+  width: 70px;
+}
+
+#pay .productTable span {
+  font-weight: 500;
+}
+
+.pay-product-button {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.pay-product-button i {
+  cursor: pointer;
+}
+
+#table-pay-product button {
+  border: none;
+}
+
+
+/* pay info */
+.pay-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.pay-info, .pay-bill {
+  width: 45%;
+}
+
+.pay-info-title b {
+  font-size: 2rem;
+}
+
+.form-control-pay {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  border: none;
+  padding-top: 1rem;
+}
+
+.form-control-pay input {
+  padding-left: 10px;
+  width: 80%;
+}
+
+.form-address {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.form-address select {
+  width: 30%;
+}
+
+.note-form {
+  width: 80%;
+}
+
+
+.pay-bill table tr {
+  text-align: center;
+}
+.pay-bill table tr{
+  border-bottom: 1px solid #999;
+}
+
+.pay-bill table tr th:first-child {
+  width: 40%;
+}
+
+
+.select-type-pay {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.select-type-pay input[type=radio] {
+  border: 0px;
+  height: 1em;
+  width: 1rem;
+}
+
+.type-pay button {
+  width: 300px;
+  height: 60px;
+  border: none;
+  outline: none;
+  background-color: orangered;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+ float: right;
+ margin-top: 3rem;
+}
+
+/* pay banner */
+
+.pay-banner {
+  width: 90%;
+  margin: 5rem auto 0;
+  padding: 1rem 5rem;
+  background-color: #999;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+.pay-banner-acctions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.pay-banner button, .btn {
+  width: max-content;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: orangered;
+  align-items: center;
+  color: white;
+}
+.pay-banner button:hover, #pay .btn:hover {
+  background-color: rgb(211, 89, 3);
+}
+#pay a {
+  text-decoration: none;
+}
+#pay a:hover {
+  text-decoration: none;
+  color: white;
+}

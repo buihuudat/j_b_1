@@ -45,4 +45,4 @@ r5.map((i, e) => {
   });
 });
 
-// code kiểu tàu khựa =))))
+// xin lỗi vì sự basic này

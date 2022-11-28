@@ -52,7 +52,7 @@ var swiper = new Swiper(".mySwiper", {
 
 var swiper = new Swiper(".mySwiperLayout", {
   spaceBetween: 30,
-  slidesPerGroup: 4,
+  slidesPerGroup: 5,
   loop: true,
   autoplay: {
     delay: 2500,
@@ -69,13 +69,20 @@ var swiper = new Swiper(".mySwiperLayout", {
   },
   breakpoints: {
     1330: {
-      slidesPerView: 4,
+      slidesPerView: 5,
     },
     890: {
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
     550: {
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
   },
+});
+
+// home -> show product
+const btnlayout_card = $(".layout_card button");
+const linklayout_card = $(".layout_card a");
+btnlayout_card.click(() => {
+  window.open("./product-show.html");
 });
