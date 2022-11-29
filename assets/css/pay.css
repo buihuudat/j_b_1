@@ -22,6 +22,14 @@
   align-items: center;
 }
 
+/* #table-pay-product input[type="checkbox"] {
+  width: 40px;                        
+  height: 40px;                       
+  clip-path: circle(46% at 50% 50%); 
+  outline: 1px solid black;
+  border: 1px solid black;
+} */
+
 #pay .productTable img {
   width: 70px;
 }
