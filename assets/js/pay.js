@@ -26,7 +26,7 @@ city.html("<option value='0'>Chọn tỉnh/TP</option>");
 ward.html("<option value='0'>Chọn quận/huyên</option>");
 district.html("<option value='0'>Chọn xã</option>");
 
-let codeWard = 1;
+let codeWard = 0;
 let wards = [];
 let citys = [];
 let districtss = [];
@@ -71,29 +71,34 @@ $(ward).change(() => {
       districtShow = "";
     }
   });
-  districtss.map((e) => {
+  districtss.forEach((e) => {
     districtShow += `<option value=${e.code}> ${e.name}</option>`;
   });
   district.html(districtShow);
 });
 
-const namePay = $("#namePay");
-const address = $("#address");
-const phone = $("#phone");
-const email = $("#email");
-const notePay = $("#notePay");
-
 const btnOrder = $(".btn-order");
 
 btnOrder.click((e) => {
-  e.preventDefault();
+  let err = false;
+  // e.preventDefault();
   if (city.val() == 0) {
     alert("Vui lòng chọn Tỉnh/TP");
+    err = true;
   } else if (ward.val() == 0) {
     alert("Vui lòng chọn quận/huyện");
+    err = true;
   } else if (district.val() == 0) {
-    alert("Vui lòng chọn xã/thị trấn");
+    alert("Vui lòng chọn xã");
+    err = true;
   }
+
+  if (err) {
+    e.preventDefault();
+    return;
+  }
+
+  alert(`Thank you, ${$("#namePay").val()}`);
 
   // name.val("");
 });
