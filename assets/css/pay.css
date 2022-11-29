@@ -53,8 +53,12 @@
 
 #table-pay-product button {
   border: none;
+  outline: none;
 }
-
+#table-pay-product button:focus {
+  border: none;
+  outline: none;
+}
 
 /* pay info */
 .pay-content {
@@ -184,3 +188,11 @@
   color: white;
 }
 
+
+#exampleModal button {
+ width: 100px;
+ height: 50px;
+ font-size: 1.4rem;
+ text-align: center;
+ padding: 0;
+}
