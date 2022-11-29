@@ -22,6 +22,9 @@ payProductButton.map((i, e) => {
 const city = $("#city");
 const ward = $("#ward");
 const district = $("#district");
+city.html("<option value='0'>Chọn tỉnh/TP</option>");
+ward.html("<option value='0'>Chọn quận/huyên</option>");
+district.html("<option value='0'>Chọn xã</option>");
 
 let codeWard = 1;
 let wards = [];
@@ -34,14 +37,15 @@ async function resData(url) {
   const response = await fetch(url);
   var data = await response.json();
   data.forEach((e) => {
-    var city = "";
-    city += `<option value=${e.code}> ${e.name}</option>`;
-    $("#city").append(city);
+    var cityShow = "";
+    cityShow += `<option value=${e.code}> ${e.name}</option>`;
+    city.append(cityShow);
   });
   citys = new Array(data);
 }
 const uri = "https://provinces.open-api.vn/api/?depth=3";
-resData(uri);
+
+$(city).click(() => resData(uri));
 
 let codeCity = 1;
 $(city).change(() => {
@@ -54,7 +58,7 @@ $(city).change(() => {
   wards.forEach((e) => {
     wardShow += `<option value=${e.code}> ${e.name}</option>`;
   });
-  $("#ward").html(wardShow);
+  ward.html(wardShow);
 });
 
 $(ward).change(() => {
@@ -67,15 +71,17 @@ $(ward).change(() => {
   districtss.map((e) => {
     districtShow += `<option value=${e.code}> ${e.name}</option>`;
   });
-  $("#district").html(districtShow);
+  district.html(districtShow);
 });
 
 const btnOrder = $(".btn-order");
 
 btnOrder.click(() => {
-  if (ward.val() == null) {
-    alert("Vui lòng chọn quận");
-  } else if (district.val() == null) {
-    alert("Vui lòng chọn huyện");
+  if (city.val() == 0) {
+    alert("Vui lòng chọn Tỉnh/TP");
+  } else if (ward.val() == 0) {
+    alert("Vui lòng chọn quận/huyện");
+  } else if (district.val() == 0) {
+    alert("Vui lòng chọn xã/thị trấn");
   }
 });
