@@ -124,7 +124,7 @@
       </tbody>
     </table>
 
-    <form class="pay-content">
+    <form class="pay-content" method="post">
       <div class="pay-info">
         <div class="pay-info-title">
           <b>Thông tin nhận hàng</b>
@@ -150,16 +150,16 @@
         <div class="d-flex">
           <div class="form-control-pay" style="width: 44%;">
             <label for="">Số điện thoại (<span style="color: red;">*</span>)</label>
-            <input required pattern="[0-9]{10}" type="text">
+            <input id="phone" required pattern="[0-9]{10}" type="text">
           </div>
           <div class="form-control-pay" style="width: 45%;">
             <label for="">Email</label>
-            <input type="email" type="text">
+            <input id="email" type="email" type="text">
           </div>
         </div>
         <div class="note-form d-flex mt-4 flex-column">
           <label for="">Ghi chú đơn hàng</label>
-          <textarea name="" id=""></textarea>
+          <textarea name="" id="notePay"></textarea>
         </div>
 
       </div>

@@ -53,6 +53,8 @@ $(city).change(() => {
   citys[0].forEach((e) => {
     if (e.code == codeCity) {
       wards = e.districts;
+      wardShow = "";
+      districtShow = "";
     }
   });
   wards.forEach((e) => {
@@ -66,6 +68,7 @@ $(ward).change(() => {
   wards.forEach((e) => {
     if (e.code == codeWard) {
       districtss = e.wards;
+      districtShow = "";
     }
   });
   districtss.map((e) => {
@@ -74,9 +77,16 @@ $(ward).change(() => {
   district.html(districtShow);
 });
 
+const namePay = $("#namePay");
+const address = $("#address");
+const phone = $("#phone");
+const email = $("#email");
+const notePay = $("#notePay");
+
 const btnOrder = $(".btn-order");
 
-btnOrder.click(() => {
+btnOrder.click((e) => {
+  e.preventDefault();
   if (city.val() == 0) {
     alert("Vui lòng chọn Tỉnh/TP");
   } else if (ward.val() == 0) {
@@ -84,4 +94,6 @@ btnOrder.click(() => {
   } else if (district.val() == 0) {
     alert("Vui lòng chọn xã/thị trấn");
   }
+
+  // name.val("");
 });
