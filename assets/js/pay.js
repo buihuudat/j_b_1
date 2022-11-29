@@ -27,6 +27,8 @@ let codeWard = 1;
 let wards = [];
 let citys = [];
 let districtss = [];
+var wardShow = "";
+var districtShow = "";
 
 async function resData(url) {
   const response = await fetch(url);
@@ -49,7 +51,6 @@ $(city).change(() => {
       wards = e.districts;
     }
   });
-  var wardShow = "";
   wards.forEach((e) => {
     wardShow += `<option value=${e.code}> ${e.name}</option>`;
   });
@@ -63,9 +64,18 @@ $(ward).change(() => {
       districtss = e.wards;
     }
   });
-  var district = "";
   districtss.map((e) => {
-    district += `<option value=${e.code}> ${e.name}</option>`;
+    districtShow += `<option value=${e.code}> ${e.name}</option>`;
   });
-  $("#district").html(district);
+  $("#district").html(districtShow);
+});
+
+const btnOrder = $(".btn-order");
+
+btnOrder.click(() => {
+  if (ward.val() == null) {
+    alert("Vui lòng chọn quận");
+  } else if (district.val() == null) {
+    alert("Vui lòng chọn huyện");
+  }
 });
